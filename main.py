@@ -24,3 +24,18 @@ img = cv2.imread("OpenCV_logo.png", 1) # the 1 is a flag and if its one i hope t
 cv2.imshow('opencvpic', img) # the windows name is opencvpic and they are looking for an img 
 cv2.waitKey(0) # NOOO TIME
 cv2.destroyAllWindows() # i thought this happened automatically but i think that this function destorys the windows they just need to wait for the key press first
+# cv the goat has a package called imwrite() aka a function that saves an image object to a specifed file, idk what this means but imma find out
+#cv2.imwrite(filename, img) lots of im*insertname*()the image format is automatically decided by opencv from the file extension. OPENCV SUPORTS 
+# *.bmp, .dib, .jpeg , .jpg , .png , .webp, .sr, .tiff ,\.tif etc image file types/
+# example 
+
+
+# write images 
+import numpy as np 
+import cv2
+img = cv2.imread("OpenCV_Logo.png", 0)
+cv2.imshow('image', img)
+key=cv2.waitKey(0)
+if key==ord('s'):
+    cv2.imwrite("opencv_logo_GS.png", img)
+cv2.destroyAllWindows()
